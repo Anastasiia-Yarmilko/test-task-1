@@ -78,11 +78,9 @@ button {
 
     &__content {
         position: relative;
-        width: 60%;
-        max-width: 600px;
-        min-width: 400px;
+        width: 500px;
         margin: 0 auto;
-        padding: 30px;
+        padding: 60px;
         border-radius: 10px;
         background-color: whitesmoke;
         transform: scale(0.95);
@@ -132,22 +130,31 @@ button {
     }
 
     &__image, &__text, &__buttons {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     &__button {
-        width: 25%;
+        width: (500px/2)-20px;
         padding: 15px 5px;
         font-size: 20px;
-        font-weight: 400;
+        font-weight: 600;
         color: gray;
         border: 1px solid gray;
         background-color: white;
 
         &:not(:last-child) {
-            margin-right: 10px;
+            margin-right: 20px;
         }
     }
+}
+
+.swal-modal {
+    border-radius: 10px;
+}
+
+.swal-text {
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .swal-button {
