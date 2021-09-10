@@ -43,11 +43,10 @@ function escBttnAction(event) {
 
 
 function closeModalByOverlay(event) {
-    console.log(event.target.nodeName);
-    // if (event.target.nodeName !== 'DIV') {
-    //     refs.modalWindow.classList.remove('is-open');
-    // }
-}
+    if (event.target.classList.value === 'modal__overlay') {
+         refs.modalWindow.classList.remove('is-open');
+    }
+};
 
 refs.openModalBtn.addEventListener('click', openModalWindow);
 refs.closeModalIcon.addEventListener('click', closeModalWindow);
