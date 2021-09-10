@@ -11,5 +11,31 @@
     <div class="main-page">
         <button type="submit" class="open-modal-btn">Uninstall the Shazam app</button>
     </div>
+
+    <!-- modal window -->
+    <div class="modal js-modal">
+        <div class="modal__overlay"></div>
+        <button
+          type="button"
+          class="modal__button"
+          data-action="close-lightbox"
+        ></button>
+        <img class="modal__image" src="./images/danger.svg" alt="Danger icon" />
+        <div class="modal__text">Are you sure you want to uninstall Shazam app?</div>
+        
+        <div class="modal__buttons">
+            <button
+                type="button"
+                class="modal__button"
+                data-action="cancel-action"
+            >Cancel</button>
+            <button
+                type="button"
+                class="modal__button"
+                data-action="confirm-action"
+            >Uninstall</button>
+        </div>
+  
+      </div>
 </body>
 </html>

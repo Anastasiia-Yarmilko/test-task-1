@@ -57,3 +57,9 @@ html, body {
         transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     }
 }
+
+.modal {
+    &__{
+        background-image: url(./images/cancel.svg);
+    }
+}
