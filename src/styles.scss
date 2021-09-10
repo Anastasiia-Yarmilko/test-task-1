@@ -1,23 +1,28 @@
-/* html, body {
-    height: 100%;
-}
-
-html {
-    display: table;
-    margin: auto;
-}
-
-body {
-    display: table-cell;
-    vertical-align: middle;
-} */
-
 html, body {
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: gray;
+    border: 1px solid gray;
+    background-color: whitesmoke;
+
+
+    &:hover, &:focus {
+        color: whitesmoke;
+        border: 1px solid red;
+        background-color: red;
+        transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
 }
 
 .body-wrapper {
@@ -41,25 +46,108 @@ html, body {
 .open-modal-btn {
     width: 400px;
     height: 60px;
-    border-style: none;
-    outline: none;
-    border-radius: 20px;
     font-size: 26px;
-    font-weight: 600;
-    background-color: rgb(182, 7, 7);
-    color: white;
-
-    &:hover, &:focus {
-        width: 500px;
-        height: 70px;
-        font-size: 30px;
-        cursor: pointer;
-        transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    }
+    font-weight: 400;
+    // background-color: rgb(182, 7, 7);
+    // color: whitesmoke;
 }
 
 .modal {
-    &__{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+
+    &.is-open {
+        opacity: 1;
+        pointer-events: initial;
+        transform: scale(1);
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    &__content {
+        position: relative;
+        width: 60%;
+        max-width: 600px;
+        min-width: 400px;
+        margin: 0 auto;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        transform: scale(0.95);
+        background-attachment: scroll;
+        background-clip: border-box;
+      }
+    
+    &__close{
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-radius: 50%;
+        background-color: transparent;
+        color: whitesmoke;
+        cursor: pointer;
+        outline: none;
         background-image: url(./images/cancel.svg);
+        background-position: center;
+        background-size: 60%;
+        background-repeat: no-repeat;
+
+        &:hover, &:focus {
+            border: none;
+            width: 52px;
+            height: 52px;    
+            background-color: transparent;
+        }
+    
+    }
+
+    &__image {
+        width: 30%;
+    }
+
+    &__text {
+        color: gray;
+        font-size: 30px;
+        font-weight: 600px;
+    }
+
+    &__image, &__text, &__buttons {
+        margin-bottom: 10px;
+    }
+
+    &__button {
+        width: 25%;
+        padding: 15px 5px;
+        font-size: 20px;
+        font-weight: 400;
+        color: gray;
+        border: 1px solid gray;
+        background-color: white;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
     }
 }

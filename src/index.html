@@ -15,27 +15,28 @@
     <!-- modal window -->
     <div class="modal modal__window">
         <div class="modal__overlay"></div>
-        <button
-          type="button"
-          class="modal__button"
-          data-action="close-lightbox"
-        ></button>
-        <img class="modal__image" src="./images/danger.svg" alt="Danger icon" />
-        <div class="modal__text">Are you sure you want to uninstall Shazam app?</div>
-        
-        <div class="modal__buttons">
+        <div class="modal__content">
             <button
-                type="button"
-                class="modal__button"
-                data-action="cancel-action"
-            >Cancel</button>
-            <button
-                type="button"
-                class="modal__button"
-                data-action="confirm-action"
-            >Uninstall</button>
+              type="button"
+              class="modal__close"
+              data-action="close-lightbox"
+            ></button>
+            <img class="modal__image" src="./images/danger.svg" alt="Danger icon" />
+            <div class="modal__text">Are you sure you want to uninstall the Shazam app?</div>
+            
+            <div class="modal__buttons">
+                <button
+                    type="button"
+                    class="modal__button"
+                    data-action="cancel-action"
+                >Cancel</button>
+                <button
+                    type="button"
+                    class="modal__button"
+                    data-action="confirm-action"
+                >Uninstall</button>
+            </div>
         </div>
-  
       </div>
 </body>
 </html>
