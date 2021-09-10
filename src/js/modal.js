@@ -1,7 +1,10 @@
-import { alert } from '@pnotify/core/dist/PNotify.js';
+import debounce from 'lodash.debounce';
+import { alert, defaultModules } from '@pnotify/core/dist/PNotify.js';
+import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
+defaultModules.set(PNotifyMobile, {});
+import { defaults } from '@pnotify/core';
+import '@pnotify/core/dist/BrightTheme.css';
 import { Stack } from '@pnotify/core';
-import "@pnotify/core/dist/PNotify.css";
-import "@pnotify/core/dist/BrightTheme.css";
 
 
 const refs = {

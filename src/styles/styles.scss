@@ -22,7 +22,6 @@ button {
         background-color: red;
         transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     }
-
 }
 
 .body-wrapper {
@@ -48,8 +47,6 @@ button {
     height: 60px;
     font-size: 26px;
     font-weight: 400;
-    // background-color: rgb(182, 7, 7);
-    // color: whitesmoke;
 }
 
 .modal {
@@ -62,6 +59,7 @@ button {
     height: 100vh;
     opacity: 0;
     pointer-events: none;
+    transition: 500ms;
 
     &.is-open {
         opacity: 1;
@@ -109,7 +107,7 @@ button {
         color: whitesmoke;
         cursor: pointer;
         outline: none;
-        background-image: url(./images/cancel.svg);
+        background-image: url(../images/cancel.svg);
         background-position: center;
         background-size: 60%;
         background-repeat: no-repeat;
@@ -134,7 +132,7 @@ button {
     }
 
     &__image, &__text, &__buttons {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     &__button {
