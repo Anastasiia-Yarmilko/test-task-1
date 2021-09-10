@@ -149,3 +149,25 @@ button {
         }
     }
 }
+
+.swal-button {
+    border-style: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: gray;
+    border: 1px solid gray;
+    background-color: whitesmoke;
+
+    &:hover, &:focus {
+        color: whitesmoke;
+        border: 1px solid red;
+        background-color: red;
+        transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    &:not([disabled]):hover {
+        border: 1px solid red;
+        background-color: red;
+    }
+}

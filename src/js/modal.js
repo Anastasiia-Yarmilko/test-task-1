@@ -1,11 +1,4 @@
-import debounce from 'lodash.debounce';
-import { alert, defaultModules } from '@pnotify/core/dist/PNotify.js';
-import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
-defaultModules.set(PNotifyMobile, {});
-import { defaults } from '@pnotify/core';
-import '@pnotify/core/dist/BrightTheme.css';
-import { Stack } from '@pnotify/core';
-
+import swal from 'sweetalert';
 
 const refs = {
     openModalBtn: document.querySelector('.open-modal-btn'),
@@ -13,6 +6,7 @@ const refs = {
     closeModalIcon: document.querySelector('[data-action="close-lightbox"]'),
     cancelActionBtn: document.querySelector('[data-action="cancel-action"]'),
     confirmActionBtn: document.querySelector('[data-action="confirm-action"]'),
+    modalWindowContent: document.querySelector('.modal__content'),
 }
 
 function openModalWindow (event) {
@@ -27,15 +21,7 @@ function closeModalWindow () {
 
 function confirmAction () {
     refs.modalWindow.classList.remove('is-open');
-
-    alert({
-        text: 'DONE',
-        type: 'error',
-        delay: 2000,
-        stack: new Stack({
-            dir1: 'up',
-        }),
-    })
+    swal("DONE!");
 }
 
 function escBttnAction(event) {
